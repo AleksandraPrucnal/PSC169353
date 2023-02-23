@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int liczba;
+    scanf("%i", &liczba);
+    liczba++;
+    printf("%i", liczba);
+    return 0;
+}
