@@ -3,6 +3,6 @@
 
 int main()
 {
-    printf("Napis zawierajacy rozne dziwne znaczki // \\ \\ $ & \%");
+    printf("Napis zawierajacy rozne dziwne znaczki // \\ \\ %$ %& %%");
     return 0;
 }
