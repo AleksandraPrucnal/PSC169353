@@ -3,6 +3,14 @@
 
 int main()
 {
-    printf("Hello world!\n");
+    int n,m,w;
+    printf("Podaj dwie dodatnie liczby calkowite: ");
+    scanf("%i %i", &n, &m);
+
+    for(int i = 1; i < m+1; i++)
+    {
+        n += n;
+        printf("%i\n", n);
+    }
     return 0;
 }
