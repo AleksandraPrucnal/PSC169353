@@ -1,8 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int foo(int n)
+{
+    return pow(2,n);
+}
+
 int main()
 {
-    printf("Hello world!\n");
+    int n;
+    printf("Podaj nieujemna liczbe calkowita: ");
+    scanf("%i", &n);
+    printf("2 ^ %i = %i", n, foo(n));
     return 0;
 }
