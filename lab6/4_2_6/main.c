@@ -5,9 +5,7 @@ void fooa(int n, int tab1[], int tab2[])
 {
     for(int i=0; i<n; i++)
     {
-        int temp = tab1[i];
-        tab1[i] = tab2[i];
-        tab2[i] = temp;
+        tab2[i] = tab1[i];
     }
 }
 

@@ -60,9 +60,9 @@ int food(int n, int *tab)
 int fooe(int n, int *tab)
 {
     int temp=abs(*tab);
-    for(int i=0; i<n; i++)
+    for(int i=1; i<n; i++)
     {
-        if(temp > abs(*(tab+i)))
+        if(temp < abs(*(tab+i)))
         {
             temp= abs(*(tab+i));
         }
