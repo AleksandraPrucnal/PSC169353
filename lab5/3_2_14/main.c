@@ -1,22 +1,35 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int foo(int (*wsk1)(int), int (*wsk2)(int), unsigned int n;)
+int foo(int (*wsk1)(int), int (*wsk2)(int), unsigned int n)
 {
-    for (int i=0; i<n; i++)
+    int warunek=0;
+    for (int i=0; i<=n; i++)
     {
-        if(wsk1==wsk2)
+        if(wsk1(i)==wsk2(i))
         {
-            return 1;
+            warunek++;
         }
+    }
+    if(warunek == n+1)
+    {
+        return 1;
     }
     return 0;
 }
 
-int pom1(int x);
+int foo1(int a)
+{
+    return a+5;
+}
+
+int foo2(int a)
+{
+    return a+5;
+}
 
 int main()
 {
-    printf("Hello world!\n");
+    printf("%d\n", foo(foo1,foo2, 7));
     return 0;
 }
