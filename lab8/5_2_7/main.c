@@ -3,7 +3,7 @@
 
 void sklej(char*nap1, char*nap2, char*nap3)
 {
-    int d,e;
+    int d=0,e=0;
     while(nap1[d])
     {
         nap3[d] = nap1[d];
