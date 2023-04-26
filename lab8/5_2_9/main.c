@@ -1,25 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int wytnij2(char*napis, int n, int m)
-{
-    int d;
-    while(napis[d])
-    {
-        d++;
-    }
-    char* napis2 = malloc((d-m+n)*sizeof(char));
-    for(int i=0; i<n; i++)
-    {
-        napis2[i]=napis[i];
-    }
-    for(int j=m; j<d; j++)
-    {
-        napis2[j] = napis[j];
-    }
-    return napis2;
-}
-
 void wytnij(char*napis, int n, int m)
 {
     int d;
@@ -27,15 +8,21 @@ void wytnij(char*napis, int n, int m)
     {
         d++;
     }
-    for(int i=0; i<m-n; i++)
+    if(m>=d)
     {
-        napis[i]=napis[m+i];
+        m=d-1;
     }
+    for(int i=0; i<m-n+1; i++)
+    {
+        napis[i]=napis[n+i];
+    }
+    napis[m-n+1] = '\0';
 }
 
 int main()
 {
     char nap[] = "Aleksandra";
-    printf("Hello world!\n");
+    wytnij(nap,3,5);
+    printf("%s\n", nap);
     return 0;
 }
