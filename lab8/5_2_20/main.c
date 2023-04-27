@@ -10,7 +10,6 @@ char* godzina(int godz, int min, int sek)
 
 int main() {
     int godz = 9, min = 45, sek = 12;
-    char* czas = godzina(godz, min, sek);
-    printf("%s\n", czas);
+    printf("%s\n", godzina(godz, min, sek));
     return 0;
 }
