@@ -1,10 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-char
-
-int main()
+char* godzina(int godz, int min, int sek)
 {
-    printf("Hello world!\n");
+    char* czas = malloc(sizeof(char) * 9);
+    sprintf(czas, "%02d:%02d:%02d", godz, min, sek);
+    return czas;
+}
+
+int main() {
+    int godz = 9, min = 45, sek = 12;
+    char* czas = godzina(godz, min, sek);
+    printf("%s\n", czas);
     return 0;
 }
