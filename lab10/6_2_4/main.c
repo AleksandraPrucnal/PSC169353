@@ -35,5 +35,14 @@ int main()
     tab[0] = malloc(4*sizeof(int));
     tab[0][0] = -3;
     tab[0][1] = 4;
+    tab[0][2] = 8;
+    tab[0][3] = 9;
+    tab[1][0] = 11;
+    tab[1][1] = -5;
+    tab[1][2] = -7;
+    tab[1][3] = 6;
+    wyswietl(tab,2,4);
+    foo(tab,2,4);
+    wyswietl(tab, 2,4);
     return 0;
 }
