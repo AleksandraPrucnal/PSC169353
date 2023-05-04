@@ -3,13 +3,16 @@
 
 int *** alokuj(int n, int m, int o)
 {
-    int *** temp = malloc(n*sizeof(int*));
+    int *** temp = malloc(n*sizeof(int**));
     for(int i=0; i<n; i++)
     {
-        temp[i]=malloc(m*sizeof(int));
+        temp[i]=malloc(m*sizeof(int*));
+    }
+    for(int i=0; i<n; i++)
+    {
         for(int j=0; j<m; j++)
         {
-            temp[j]=malloc(o*sizeof(int));
+            temp[i][j] = malloc(o*sizeof(int));
         }
     }
     return temp;
@@ -17,6 +20,13 @@ int *** alokuj(int n, int m, int o)
 
 void zwolnij(int ***tab, int n, int m, int o)
 {
+    for(int i=0; i<n; i++)
+    {
+        for(int j=0; j<m; j++)
+        {
+            free(tab[i][j]);
+        }
+    }
     for(int i=0; i<n; i++)
     {
         free(tab[i]);
