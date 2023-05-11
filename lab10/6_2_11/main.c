@@ -11,7 +11,7 @@ int ** alokuj(int n)
     return temp;
 }
 
-void wypelnij_tab(int **tab, int n)
+void wypelnij_tab(int tab[][100], int n)
 {
     for(int i=0; i<n;i++)
     {
@@ -22,7 +22,7 @@ void wypelnij_tab(int **tab, int n)
     }
 }
 
-int suma(int **tab, int n)
+int suma(int tab[][100], int n)
 {
     int suma = 0;
     for(int i=0; i<n;i++)
