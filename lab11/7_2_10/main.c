@@ -13,10 +13,18 @@ int main()
     zmienna.a = 4;
     printf("%d\n", zmienna.a);
     printf("%u\n", zmienna.a);
-    zmienna.b = 4;
+    printf("---\n");
+    zmienna.b=4;
+    printf("%d\n", zmienna.a);
+    printf("%u\n", zmienna.a);
+    printf("---\n");
     zmienna.a = -4;
     printf("%d\n", zmienna.a);
     printf("%u\n", zmienna.a);
-    zmienna.b = -4;
+    printf("---\n");
+    zmienna.b=-4;
+    printf("%d\n", zmienna.a);
+    printf("%u\n", zmienna.a);
+    printf("---\n");
     return 0;
 }
